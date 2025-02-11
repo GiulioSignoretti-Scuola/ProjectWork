@@ -7,12 +7,12 @@ import { AboutuComponent } from './components/aboutu/aboutu.component';
 import { CarrelloComponent } from './components/carrello/carrello.component';
 
 export const routes: Routes = [
-    { path: '**', component: NotFoundComponent },
     { path: '', component: WelcomeComponent},
     { path: 'home', component: HomeComponent },
     { path: 'vassoio', component: VassoioComponent},
     { path: 'about', component: AboutuComponent },
     { path: 'carrello', component: CarrelloComponent },
     { path: 'categoria/:categoria', component: HomeComponent },
-    
+    { path: '**', component: NotFoundComponent },
+
 ];

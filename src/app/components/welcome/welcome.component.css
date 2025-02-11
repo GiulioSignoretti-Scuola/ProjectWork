@@ -1,0 +1,21 @@
+.responsive-img {
+
+    width: 100%;
+    height: 100%;
+}
+  
+@media (max-width: 800px) {
+    .responsive-img {
+
+      width: 100%;
+      height: 100%;
+    }
+}
+
+.img-container img {
+    width: 100%;
+}
+
+.container {
+
+}
