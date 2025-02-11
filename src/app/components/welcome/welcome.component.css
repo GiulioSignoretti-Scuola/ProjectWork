@@ -1,12 +1,12 @@
 .responsive-img {
-
+    content: url("/assets/img1.jpg");
     width: 100%;
     height: 100%;
 }
   
-@media (max-width: 800px) {
+@media (max-width: 880px) {
     .responsive-img {
-
+      content: url("/assets/img1_resized.jpg"); /* Immagine per schermi più piccoli */
       width: 100%;
       height: 100%;
     }
@@ -14,8 +14,4 @@
 
 .img-container img {
     width: 100%;
-}
-
-.container {
-
 }
