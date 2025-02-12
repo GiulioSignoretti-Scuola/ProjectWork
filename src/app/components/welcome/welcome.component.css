@@ -15,3 +15,26 @@
 .img-container img {
     width: 100%;
 }
+
+.btn-container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centro esatto */
+}
+
+#btn-welcome {
+    padding: 3.75rem 5rem;
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+}
+
+#btn-welcome:hover {
+    border-color: dimgray;
+    color: black;
+}
