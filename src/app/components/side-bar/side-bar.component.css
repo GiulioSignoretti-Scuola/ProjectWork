@@ -1,0 +1,39 @@
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px; 
+    background-color: #f8f9fa;
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding-bottom: 150px;
+}
+
+.immagine{
+    width: 200px;
+    height: auto;
+    align-items: center;
+}
+
+.categoria{
+    align-items: center;
+    padding:30px;
+    border-radius: 20px;
+    height: 300px;
+    width: 250px;
+}
+
+.testo{
+    font-size: 40px;;
+    color: black;
+}
+
+.categoria:hover{
+    background-color: #9c9c9c;
+    transform: scale(1.07);
+    transition: all 0.3s ease-in-out;
+}

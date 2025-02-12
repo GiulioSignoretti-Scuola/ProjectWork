@@ -1,0 +1,25 @@
+.footerB{
+    display: flex;
+    background-color: lightgrey;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    height: 150px;
+}
+
+.buttonB{
+    width: 400px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.importo{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.allineamento{
+    display: flex;
+    align-items: center;
+}
