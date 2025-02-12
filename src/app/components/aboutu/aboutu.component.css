@@ -1,0 +1,76 @@
+.home{
+    display:flex !important;
+    justify-content: end !important;
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+.tutto{
+    height: 200px;
+    background-color: rgb(209, 209, 209)!important;
+}
+
+.testo:hover{
+    color: white;
+}
+
+.logo{
+    width: 200px;
+    height: auto;
+    margin-left: 20px;
+}
+
+.info{
+    margin-top: 50px;
+}
+
+.titolo{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.container{
+    display: flex !important;
+    justify-content: space-around !important;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.text-hover{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    
+}
+
+.immagine{
+    width: 400px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 30px;
+}
+
+.cartella {
+    position: relative;
+    display: inline-block;
+    width: 400px;
+}
+
+.cartella:hover .immagine {
+    opacity: 0.3;
+}
+
+.cartella:hover .text-hover {
+    opacity: 1;
+}
+
