@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ProdottoComponent } from '../components/prodotto/prodotto.component';
+import { prodotto } from '../models/prodotto';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +8,9 @@ export class ProdottiService {
 
   constructor() { }
 
-  private prodotti: ProdottoComponent[] = [
+  
+
+  private prodotti: prodotto[] = [
     {
         Id: 1,
         Descrizione: "Cheeseburger",
@@ -90,5 +92,9 @@ export class ProdottiService {
     { Id: 19, Descrizione: "Cheesecake", Prezzo: 4.99, Categoria: "Caffè e Dolci", Immagine:"Cheesecake.png" },
     { Id: 20, Descrizione: "Brownie al Cioccolato", Prezzo: 3.99, Categoria: "Caffè e Dolci", Immagine:"Brownie.png" }
 ];
+
+getProdottiByCategoria(categoria: string): prodotto[] {
+    return this.prodotti.filter(prodotto => prodotto.Categoria.toLowerCase() === categoria.toLowerCase());
+}
 
 }
