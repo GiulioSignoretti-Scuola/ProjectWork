@@ -1,1 +1,7 @@
-<p>prodotto works!</p>
+<div class="d-flex f-wrap justify-content-around">
+  <div *ngFor="let prodotto of prodotti">
+    <h3>{{ prodotto.Descrizione }}</h3>
+    <p>Prezzo: {{ prodotto.Prezzo }} €</p>
+    <img [src]="'assets/' + prodotto.Immagine" alt="{{ prodotto.Descrizione }}" width="100">
+  </div>
+</div>
