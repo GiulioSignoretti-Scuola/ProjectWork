@@ -1,3 +1,13 @@
 .prodotto{
     position: relative;
 }
+
+.allineamento1{
+    width: 30%;
+    float: left;
+}
+
+.allineamento2{
+    width: 70%;
+    float: right;
+}
