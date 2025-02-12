@@ -14,7 +14,6 @@ export const routes: Routes = [
     { path: 'vassoio', component: VassoioComponent},
     { path: 'about', component: AboutuComponent },
     { path: 'carrello', component: CarrelloComponent },
-    { path: 'categoria/:categoria', component: HomeComponent },
+    { path: 'home/:categoria', component: HomeComponent },
     { path: '**', component: NotFoundComponent },
-
 ];
