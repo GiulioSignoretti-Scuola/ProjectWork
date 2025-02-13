@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { prodotto } from '../../models/prodotto';
 import { CarrelloService } from '../../services/carrello.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-carrello',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './carrello.component.html',
   styleUrl: './carrello.component.css'
 })
