@@ -4,6 +4,8 @@ import { prodotto } from '../../models/prodotto';
 import { ProdottiService } from '../../services/prodotti.service';
 import { CommonModule } from '@angular/common';
 import { Ingrediente } from '../../models/ingredienti';
+import { CarrelloComponent } from '../carrello/carrello.component';
+import { CarrelloService } from '../../services/carrello.service';
 
 @Component({
   selector: 'app-singolo-prodotto',
@@ -18,7 +20,7 @@ import { Ingrediente } from '../../models/ingredienti';
 export class SingoloProdottoComponent {
     prodotto: prodotto | undefined;
 
-    constructor(private prodottiServices: ProdottiService, private routes: ActivatedRoute){
+    constructor(private prodottiServices: ProdottiService, private routes: ActivatedRoute, private carrelloService: CarrelloService){
   
       this.routes.paramMap.subscribe(params => {
         let Id = routes.snapshot.params['id'];
@@ -39,5 +41,10 @@ export class SingoloProdottoComponent {
 
     togliIngrediente(i: Ingrediente){
       i.Quantita = 0;
+    }
+
+    aggiungiAlCarrello(prodotto: prodotto | undefined){
+      if (prodotto != undefined)
+        this.carrelloService.add(prodotto)
     }
 }
