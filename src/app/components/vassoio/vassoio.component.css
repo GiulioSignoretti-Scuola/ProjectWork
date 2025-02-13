@@ -1,0 +1,28 @@
+
+.immagine{
+    width: 400px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 30px;
+}
+.wrapper {
+    background-image: image-set("assets/sfondo2.jpg");  
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+button{
+    align-items: center;
+    padding:30px;
+    border-radius: 20px;
+    font-size: 40px;;
+    color: black;
+}
+button:hover {
+    transform: scale(1.07);
+    transition: all 0.3s ease-in-out;
+    background-color: #9c9c9c;
+}
