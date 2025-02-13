@@ -1,18 +1,27 @@
-<table>
+<table class="table tabella">
     <thead>
         <tr>
             <th>Prodotto</th>
             <th>Prezzo</th>
             <th>Quantità</th>
-            <th>Elimina</th>
+            <th>Gestione</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let prodotto of prodotti">
-            <td>{{prodotto.Descrizione}}</td>
+            <td>{{prodotto.Descrizione}}<br><!--{{prodotto.modifiche}}  --></td>
             <td>{{prodotto.Prezzo}}</td>
-            <!-- <td><button+>{{prodotto.Descrizione}}<button-></td> -->
+            <td>-</td>
+            <!-- <td><button+>{{prodotto.quantita}}<button-></td> -->
             <td><a class="text-danger" (click)="elimina(prodotto)">Elimina</a></td>
         </tr>
     </tbody>
+    <tfoot>
+        <tr>
+            <td>Totale Prodotti: <!-- {{prodotti.numero}} --></td>
+            <td>-</td>
+            <td>Totale Importo: <!-- {{prodotti.prezzo}} --></td>
+            <td>-</td>
+        </tr>
+    </tfoot>
 </table>
