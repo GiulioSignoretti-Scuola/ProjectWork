@@ -5,6 +5,10 @@
     margin-top: 60px;
 }
 
+.table{
+    width: 100%;
+}
+
 .testo{
     font-size: 50px;
     font-weight: bold;
