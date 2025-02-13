@@ -1,0 +1,21 @@
+.home{
+    display:flex !important;
+    justify-content: end !important;
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+.tutto{
+    height: 200px;
+    background-color: rgb(209, 209, 209)!important;
+}
+
+.testo:hover{
+    color: white;
+}
+
+.logo{
+    width: 200px;
+    height: auto;
+    margin-left: 47px;
+}
