@@ -13,11 +13,11 @@
     justify-content: end !important;
   }
   
-  .container:hover {
+  .container {
     transform: scale(1.03);
   }
   
-  .container:hover .left-side {
+  .container .left-side {
     width: 100%;
   }
   
@@ -46,7 +46,7 @@
     transition: 0.3s;
   }
   
-  .right-side:hover {
+  .right-side {
     background-color: #f9f7f9;
   }
   
@@ -90,7 +90,7 @@
       transform: scale(0.7);
     }
   
-    .container:hover {
+    .container {
       transform: scale(0.74);
     }
   
@@ -110,11 +110,11 @@
     margin: 10px 0 0 -30px;
   }
   
-  .container:hover .card {
+  .container .card {
     animation: slide-top 1.2s cubic-bezier(0.645, 0.045, 0.355, 1) both;
   }
   
-  .container:hover .post {
+  .container .post {
     animation: slide-post 1s cubic-bezier(0.165, 0.84, 0.44, 1) both;
   }
   
@@ -242,4 +242,8 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  .bottone{
+    border: none;
   }

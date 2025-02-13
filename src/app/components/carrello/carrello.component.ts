@@ -3,11 +3,12 @@ import { prodotto } from '../../models/prodotto';
 import { CarrelloService } from '../../services/carrello.service';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from "../header/header.component";
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-carrello',
   standalone: true,
-  imports: [CommonModule, HeaderComponent],
+  imports: [CommonModule, HeaderComponent, RouterLink],
   templateUrl: './carrello.component.html',
   styleUrl: './carrello.component.css'
 })

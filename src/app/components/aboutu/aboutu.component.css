@@ -1,6 +1,12 @@
 
 .info{
-    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    color: white;
+    font-weight: bold;
+    font-size: 70px;
 }
 
 .titolo{
@@ -13,7 +19,6 @@
     display: flex !important;
     justify-content: space-around !important;
     align-items: center;
-    margin-top: 200px;
 }
 
 .text-hover{
@@ -21,13 +26,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
-    color: rgb(0, 0, 0);
+    width: 100%;
+    color: rgb(255, 255, 255);
     font-weight: bold;
-    font-size: 20px;
+    font-size: 30px;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
-    
+    background-color: #ffe53b;
+    background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
+    border-radius: 40px;
 }
 
 .immagine{
@@ -43,6 +50,7 @@
     position: relative;
     display: inline-block;
     width: 400px;
+    margin-top: 150px;
 }
 
 .cartella:hover .immagine {
@@ -52,4 +60,14 @@
 .cartella:hover .text-hover {
     opacity: 1;
 }
+
+.sfondo{
+    background-image: image-set("assets/sfondo2.jpg");
+    height: 76vh;
+}
+
+.sfondo2{
+    background-image: image-set("assets/sfondo3.jpg");
+}
+
 

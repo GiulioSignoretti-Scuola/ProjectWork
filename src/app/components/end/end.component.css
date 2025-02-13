@@ -1,0 +1,229 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.thank-you-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    font-size: 6rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+p {
+    font-size: 4rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+.rating-prompt {
+    font-size: 3rem;
+    color: #555;
+}
+
+.rating{
+    justify-content: content;
+}
+ 
+.rating-container {
+    text-align: center;
+}
+
+.rating {
+    flex-direction: row-reverse;
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Aumenta lo spazio tra le stelle */
+    --stroke: #666;
+    --fill: #ffc73a;
+}
+
+.rating input {
+    appearance: unset;
+}
+
+.rating label {
+    cursor: pointer;
+}
+
+.rating svg {
+    width: 5rem; /* Stelle molto più grandi */
+    height: 5rem; /* Stelle molto più grandi */
+    overflow: visible;
+    fill: transparent;
+    stroke: var(--stroke);
+    stroke-linejoin: bevel;
+    stroke-dasharray: 12;
+    animation: idle 4s linear infinite;
+    transition: stroke 0.2s, fill 0.5s;
+}
+
+@keyframes idle {
+    from {
+        stroke-dashoffset: 24;
+    }
+}
+
+.rating label:hover svg {
+    stroke: var(--fill);
+}
+
+.rating input:checked ~ label svg {
+    transition: 0s;
+    animation: idle 4s linear infinite, yippee 0.75s backwards;
+    fill: var(--fill);
+    stroke: var(--fill);
+    stroke-opacity: 0;
+    stroke-dasharray: 0;
+    stroke-linejoin: miter;
+    stroke-width: 8px;
+}
+
+@keyframes yippee {
+    0% {
+        transform: scale(1);
+        fill: var(--fill);
+        fill-opacity: 0;
+        stroke-opacity: 1;
+        stroke: var(--stroke);
+        stroke-dasharray: 10;
+        stroke-width: 1px;
+        stroke-linejoin: bevel;
+    }
+
+    30% {
+        transform: scale(0);
+        fill: var(--fill);
+        fill-opacity: 0;
+        stroke-opacity: 1;
+        stroke: var(--stroke);
+        stroke-dasharray: 10;
+        stroke-width: 1px;
+        stroke-linejoin: bevel;
+    }
+
+    30.1% {
+        stroke: var(--fill);
+        stroke-dasharray: 0;
+        stroke-linejoin: miter;
+        stroke-width: 8px;
+    }
+
+    60% {
+        transform: scale(1.2);
+        fill: var(--fill);
+    }
+}
+
+/* Feedback Container */
+.feedback-container {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5rem;
+    padding: 1.5rem; /* Aumentato il padding */
+    width: 100%;
+    max-width: 800px; /* Triplicato rispetto a 400px */
+    margin: 0 auto; /* Centrato orizzontalmente */
+    transform: scale(1); /* Triplica le dimensioni */
+    transform-origin: center; /* Mantiene il ridimensionamento centrato */
+}
+
+/* Feedback Title */
+.feedback-title {
+    text-align: center;
+    color: #e2e8f0;
+    font-size: 2.5rem; /* Triplicato rispetto a 1.25rem */
+    font-weight: bold;
+    grid-column: span 6;
+}
+
+/* Feedback Textarea */
+.feedback-textarea {
+    background-color: #f1f5f9;
+    color: #475569;
+    height: 14rem; /* Triplicato rispetto a 7rem */
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem; /* Triplicato rispetto a 0.5rem */
+    grid-column: span 6;
+    resize: none;
+    outline: none;
+    padding: 1rem; /* Triplicato rispetto a 0.5rem */
+    transition: border-color 0.3s ease;
+    font-size: 2rem; /* Aumentato per adattarsi alle dimensioni */
+}
+
+.feedback-textarea:focus {
+    border-color: #475569;
+}
+
+.feedback-textarea::placeholder {
+    color: #475569;
+    opacity: 1;
+    font-size: 1rem; /* Aumentato per adattarsi alle dimensioni */
+}
+
+/* Feedback Buttons */
+.feedback-button {
+    fill: #475569;
+    grid-column: span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem; /* Triplicato rispetto a 0.5rem */
+    padding: 1rem; /* Triplicato rispetto a 0.5rem */
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.feedback-button:hover {
+    border-color: #475569;
+}
+
+.feedback-button:focus {
+    fill: #bfdbfe;
+    background-color: #60a5fa;
+}
+
+/* Feedback Spacer */
+.feedback-spacer {
+    grid-column: span 2;
+}
+
+/* Feedback Submit Button */
+.feedback-submit-button {
+    background-color: #f1f5f9;
+    stroke: #475569;
+    border: 1px solid #e2e8f0;
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem; /* Triplicato rispetto a 0.5rem */
+    padding: 1rem; /* Triplicato rispetto a 0.5rem */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.feedback-submit-button:hover {
+    border-color: #475569;
+    color: white;
+}
+
+.feedback-submit-button:focus {
+    stroke: #bfdbfe;
+    background-color: #60a5fa;
+}
+  

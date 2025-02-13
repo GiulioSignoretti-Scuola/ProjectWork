@@ -6,6 +6,7 @@ import { VassoioComponent } from './components/vassoio/vassoio.component';
 import { AboutuComponent } from './components/aboutu/aboutu.component';
 import { CarrelloComponent } from './components/carrello/carrello.component';
 import { ProdottoComponent } from './components/prodotto/prodotto.component';
+import { EndComponent } from './components/end/end.component';
 
 export const routes: Routes = [
     { path: '', component: WelcomeComponent},
@@ -15,5 +16,7 @@ export const routes: Routes = [
     { path: 'about', component: AboutuComponent },
     { path: 'carrello', component: CarrelloComponent },
     { path: 'home/:categoria', component: HomeComponent },
+    { path: 'end', component: EndComponent},
     { path: '**', component: NotFoundComponent },
+    
 ];
