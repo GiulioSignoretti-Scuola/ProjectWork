@@ -9,4 +9,33 @@
           </div>
       </div>
     </div>
+</div>
+
+<div class="container w-100"*ngIf="prodotto?.Categoria == 'Panini'">
+  <div class="container w-100">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Ingrediente</th>
+          <th scope="col">Quantita</th>
+          <th scope="col">Aumenta</th>
+          <th scope="col">Diminuisci</th>
+          <th scope="col">Cancella</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr *ngFor="let ingrediente of prodotto?.Ingredienti">
+          <th scope="row">{{ingrediente.Descrizione}}</th>
+          <th>{{ingrediente.Quantita}}</th>
+          <td><button type="button" class="btn btn-outline-success" (click)="aggiungiIngrediente(ingrediente)">+</button></td>
+          <td><button type="button" class="btn btn-outline-danger" (click)="diminuisciIngrediente(ingrediente)">-</button></td>
+          <td><button type="button" class="btn btn-outline-warning" (click)="togliIngrediente(ingrediente)">🗑️</button></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
+</div>
+
+<div class="container w-100 aggiungiCarrello">
+  <button type="button" class="btn btn-warning">Aggiungi Al Carrello</button>
+</div>
