@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { ProdottiService } from '../../services/prodotti.service';
 import { prodotto } from '../../models/prodotto';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-prodotto',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './prodotto.component.html',
   styleUrl: './prodotto.component.css'
 })

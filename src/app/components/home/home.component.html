@@ -2,9 +2,18 @@
 
 <div class="d-flex f-wrap justify-content-around">
 
-    <div class="prodotto">
-        <app-prodotto class="allineamento2"></app-prodotto>
+    <div class="listaProdotti">
+
+        <div class="prodotto" *ngIf="!singoloProdotto">
+            <app-prodotto class="allineamento2"></app-prodotto>
+        </div>
+    
+        <div class="ingredienti-prodotto" *ngIf="singoloProdotto">
+            <app-singolo-prodotto class="allineamento2"></app-singolo-prodotto>
+        </div>
+
     </div>
+
 
 </div>
 

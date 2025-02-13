@@ -97,4 +97,8 @@ getProdottiByCategoria(categoria: string): prodotto[] {
     return this.prodotti.filter(prodotto => prodotto.Categoria.toLowerCase() === categoria.toLowerCase());
 }
 
+getProdottiById(Id: number): prodotto | undefined {
+    return this.prodotti.find(prodotto => prodotto.Id == Id);
+}
+
 }

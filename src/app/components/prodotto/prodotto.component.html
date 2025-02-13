@@ -3,7 +3,7 @@
 <div class="container w-100">
   <div class="d-flex flex-wrap justify-content-around">
     <div *ngFor="let prodotto of prodotti" class="card w-50">
-        <a href="'assets/'+ prodotto.id"><img class="card-img-top" [src]=" 'assets/'+ prodotto.Immagine " alt="immagine libro"></a>
+        <a [routerLink]="'/home/prodotto/' +  prodotto.Id"><img class="card-img-top" [src]=" 'assets/'+ prodotto.Immagine " alt="immagine libro"></a>
         <div class="card-body">
             <h3 class="card-title">{{prodotto.Descrizione}}</h3>
             <h3 class="card-text">{{prodotto.Prezzo}}€</h3>

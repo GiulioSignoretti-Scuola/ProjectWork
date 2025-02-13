@@ -3,14 +3,29 @@ import { Component } from '@angular/core';
 import { FooterComponent } from "../footer/footer.component";
 import { SideBarComponent } from "../side-bar/side-bar.component";
 import { ProdottoComponent } from "../prodotto/prodotto.component";
+import { ActivatedRoute } from '@angular/router';
+import { ProdottiService } from '../../services/prodotti.service';
+import { prodotto } from '../../models/prodotto';
+import { SingoloProdottoComponent } from "../singolo-prodotto/singolo-prodotto.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, FooterComponent, SideBarComponent, ProdottoComponent],
+  imports: [CommonModule, FooterComponent, SideBarComponent, ProdottoComponent, SingoloProdottoComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+
+  singoloProdotto: boolean = false;
+
+  constructor(private prodottiServices: ProdottiService, private routes: ActivatedRoute){
+    this.routes.paramMap.subscribe(params => {
+      this.singoloProdotto = routes.snapshot.params['id'] != undefined;
+    })
+
+  }
+
+
 
 }
