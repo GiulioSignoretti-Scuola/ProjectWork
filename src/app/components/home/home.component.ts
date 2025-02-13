@@ -7,11 +7,12 @@ import { ActivatedRoute } from '@angular/router';
 import { ProdottiService } from '../../services/prodotti.service';
 import { prodotto } from '../../models/prodotto';
 import { SingoloProdottoComponent } from "../singolo-prodotto/singolo-prodotto.component";
+import { HeaderComponent } from "../header/header.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, FooterComponent, SideBarComponent, ProdottoComponent, SingoloProdottoComponent],
+  imports: [CommonModule, FooterComponent, SideBarComponent, ProdottoComponent, SingoloProdottoComponent, HeaderComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

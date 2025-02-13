@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { prodotto } from '../../models/prodotto';
 import { CarrelloService } from '../../services/carrello.service';
 import { CommonModule } from '@angular/common';
+import { HeaderComponent } from "../header/header.component";
 
 @Component({
   selector: 'app-carrello',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, HeaderComponent],
   templateUrl: './carrello.component.html',
   styleUrl: './carrello.component.css'
 })
