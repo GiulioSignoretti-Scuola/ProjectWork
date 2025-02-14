@@ -3,7 +3,6 @@
 }
  
 .container {
-    background-color: #ffffff;
     display: flex;
     width: 270px;
     height: 120px;
@@ -12,7 +11,7 @@
     transition: 0.3s ease-in-out;
     justify-content: end !important;
     position: fixed;
-    bottom: 300px;
+    bottom: 350px;
     left: 0;
     right: 0;
   }
@@ -52,6 +51,8 @@
   
   .right-side {
     background-color: #f9f7f9;
+    border-radius: 20px;
+    border: 1px solid black;
   }
   
   .arrow {
@@ -62,8 +63,10 @@
   
   .new {
     font-size: 23px;
+    font-weight: bold;
     font-family: "Lexend Deca", sans-serif;
-    margin-left: 20px;
+    padding: 20px;
+    border-radius: 30px;
   }
   
   .card {
@@ -250,4 +253,9 @@
 
   .bottone{
     border: none;
+  }
+
+  .sfondo{
+    background-image: image-set("assets/sfondo2.jpg");
+    height: 80.5vh;
   }
