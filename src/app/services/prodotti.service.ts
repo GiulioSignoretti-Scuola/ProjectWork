@@ -18,7 +18,7 @@ export class ProdottiService {
         Categoria: "Panini",
         Immagine:"Cheeseburger.png",
         Ingredienti: [
-            { Id: 101, Descrizione: "Pane Burger", Quantita: 1, QuantitaMin: 1, QuantitaMax: 1, IncrementoPrezzo: 0,Immagine:"PaneBurger.png", quantitaIniziale: 1  },
+            { Id: 101, Descrizione: "Pane Burger", Quantita: 1, QuantitaMin: 1, QuantitaMax: 1, IncrementoPrezzo: 0,Immagine:'PaneBurger.png', quantitaIniziale: 1  },
             { Id: 102, Descrizione: "Carne di manzo", Quantita: 1, QuantitaMin: 1, QuantitaMax: 2, IncrementoPrezzo: 1, Immagine:"CarneManzo.png", quantitaIniziale: 1 },
             { Id: 103, Descrizione: "Formaggio Cheddar", Quantita: 1, QuantitaMin: 0, QuantitaMax: 2, IncrementoPrezzo: 0.4, Immagine:"FormaggioCheddar.png", quantitaIniziale: 1 },
             { Id: 104, Descrizione: "Ketchup", Quantita: 1, QuantitaMin: 0, QuantitaMax: 2, IncrementoPrezzo: 0.4, Immagine:"Ketchup.png", quantitaIniziale: 1 }
