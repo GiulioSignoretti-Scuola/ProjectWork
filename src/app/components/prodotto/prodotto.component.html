@@ -1,12 +1,14 @@
-<h1 class="testo">Lista Prodotti</h1>
-<div class="container w-100">
-  <div class="d-flex flex-wrap justify-content-around">
-    <div *ngFor="let prodotto of prodotti" class="card w-50 bordo"> 
-        <a [routerLink]="'/home/prodotto/' +  prodotto.Id"><img class="card-img-top" [src]=" 'assets/'+ prodotto.Immagine " alt="immagine libro"></a>
-        <div class="card-body">
-            <h3 class="card-title">{{prodotto.Descrizione}}</h3>
-            <h3 class="card-text">{{prodotto.Prezzo}}€</h3>
-        </div>
+<div>
+  <h1 class="testo" align="center">Lista Prodotti</h1>
+  <div class="container w-100">
+    <div class="d-flex flex-wrap justify-content-around">
+      <div *ngFor="let prodotto of prodotti" class="card w-50 bordo"> 
+          <a [routerLink]="'/home/prodotto/' +  prodotto.Id"><img class="card-img-top" [src]=" 'assets/'+ prodotto.Immagine " alt="immagine libro"></a>
+          <div class="card-body">
+              <h3 class="card-title">{{prodotto.Descrizione}}</h3>
+              <h3 class="card-text">{{prodotto.Prezzo}}€</h3>
+          </div>
+      </div>
     </div>
   </div>
 </div>
