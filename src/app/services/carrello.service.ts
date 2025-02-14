@@ -40,13 +40,12 @@ export class CarrelloService {
 
   get totaleImporto(): number {
     const totaleProdotti = this.carrello.reduce(
-      (total, prodotto) => total + (prodotto.Prezzo * prodotto.Quantita), 0
-    );
-  
-    const totaleIngredienti = this.ingrediente.reduce(
-      (total, ingrediente) => total + (ingrediente.IncrementoPrezzo * ingrediente.Quantita), 0
-    );
-  
-    return totaleProdotti + totaleIngredienti;
-  }
+    (total, prodotto) => total + (
+    (prodotto.Prezzo +
+      
+    ( prodotto.Ingredienti!=undefined ? prodotto.Ingredienti.reduce((t,i) => t + i.IncrementoPrezzo*Math.max(i.Quantita-i.quantitaIniziale,0),0) : 0)
+
+    ) * prodotto.Quantita), 0);
+    return totaleProdotti;
+    }
 }
