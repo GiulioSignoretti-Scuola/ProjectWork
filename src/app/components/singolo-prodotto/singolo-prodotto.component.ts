@@ -40,7 +40,10 @@ export class SingoloProdottoComponent {
     }
 
     aggiungiAlCarrello(prodotto: prodotto | undefined){
-      if (prodotto != undefined)
+      if (prodotto != undefined){
+        prodotto.Quantita = 1;
         this.carrelloService.add(prodotto)
+      }
+        
     }
 }
