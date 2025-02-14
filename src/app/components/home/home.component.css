@@ -16,3 +16,7 @@
     background-image: image-set("assets/sfondo2.jpg");
     height: 83vh;
 }
+
+.listaProdotti{
+    width: 100%;
+}
