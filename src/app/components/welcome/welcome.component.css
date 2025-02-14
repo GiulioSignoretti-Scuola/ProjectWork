@@ -1,14 +1,12 @@
 .responsive-img {
-    content: url("/assets/img1.jpg");
-    width: 100%;
-    height: 100%;
+    background-image: image-set("assets/sfondo2.jpg");
+    height: 100vh;
 }
   
 @media (max-width: 880px) {
     .responsive-img {
-      content: url("/assets/img1_resized.jpg"); /* Immagine per schermi più piccoli */
-      width: 100%;
-      height: 100%;
+        background-image: image-set("assets/sfondo2.jpg");
+        height: 100vh;
     }
 }
 
@@ -21,20 +19,14 @@
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%); /* Centro esatto */
+    display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#btn-welcome {
-    padding: 3.75rem 5rem;
-    font-size: 50px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-
+.logo{
+    width: 400px;
+    height: auto;
+    margin-left: 47px;
 }
-
-#btn-welcome:hover {
-    border-color: dimgray;
-    color: black;
-}
+  
