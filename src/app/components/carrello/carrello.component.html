@@ -20,12 +20,15 @@
             </td>
             <td><a class="text-danger" (click)="elimina(prodotto)">Elimina</a></td>
         </tr>
+        <tr>
+            <td class="spaziatura"></td>
+        </tr>
     </tbody>
     <tfoot>
-      <tr>
-          <td>Totale Prodotti: </td>
+      <tr class="tfoot">
+          <td><strong> Totale Prodotti: </strong></td>
           <td>{{carrelloService.totaleProdotti}}</td>
-          <td>Totale Importo: </td>
+          <td><strong> Totale Importo: </strong></td>
           <td>{{carrelloService.totaleImporto | currency:'EUR'}}</td>
       </tr>
   </tfoot>
