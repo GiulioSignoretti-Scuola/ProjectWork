@@ -13,22 +13,22 @@
 
 <div class="container w-100"*ngIf="prodotto?.Categoria == 'Panini'">
   <div class="container w-100">
-    <table class="table">
+    <table class="table tabella align-middle text-center">
       <thead>
         <tr>
           <th scope="col">Ingrediente</th>
           <th scope="col">Quantita</th>
           <th scope="col">Aumenta</th>
-          <th scope="col">Diminuisci</th>
+          <th scope="col" >Diminuisci</th>
           <th scope="col">Prezzo</th>
         </tr>
       </thead>
       <tbody class="table-group-divider">
         <tr *ngFor="let ingrediente of prodotto?.Ingredienti">
-          <th scope="row">{{ingrediente.Descrizione}}</th>
-          <th>{{ingrediente.Quantita}}</th>
-          <td><button type="button" class="btn btn-outline-success" (click)="aggiungiIngrediente(ingrediente)">+</button></td>
-          <td><button type="button" class="btn btn-outline-danger" (click)="diminuisciIngrediente(ingrediente)">-</button></td>
+          <td scope="row">{{ingrediente.Descrizione}}</td>
+          <td>{{ingrediente.Quantita}}</td>
+          <td><button type="button" class="btn btn-outline-success simboli" (click)="aggiungiIngrediente(ingrediente)">+</button></td>
+          <td><button type="button" class="btn btn-outline-danger simboli" (click)="diminuisciIngrediente(ingrediente)">-</button></td>
           <td align="center">{{ingrediente.IncrementoPrezzo}}</td>
         </tr>
       </tbody>
@@ -37,5 +37,5 @@
 </div>
 
 <div class="container w-100 aggiungiCarrello">
-  <button type="button" class="btn btn-warning"(click)="aggiungiAlCarrello(prodotto)">Aggiungi Al Carrello</button>
+  <button type="button" class="btn btn-warning buttonB"(click)="aggiungiAlCarrello(prodotto)" [routerLink]="'/home'" >Aggiungi Al Carrello</button>
 </div>

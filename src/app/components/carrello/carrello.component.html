@@ -1,6 +1,6 @@
 <app-header></app-header>
 
-<table class="table tabella">
+<table class="table tabella align-middle text-center">
     <thead>
         <tr>
             <th>Prodotto</th>
@@ -14,9 +14,9 @@
             <td>{{prodotto.Descrizione}}<br><!--{{prodotto.modifiche}}  --></td>
             <td>{{carrelloService.getimportoProdotto(prodotto)}}</td>
             <td>
-              <button type="button" class="btn btn-outline-success" (click)="aggiungiQuantita(prodotto)">+</button>
+              <button type="button" class="btn btn-outline-success simbolo" (click)="aggiungiQuantita(prodotto)">+</button>
               {{prodotto.Quantita}}
-              <button type="button" class="btn btn-outline-danger" (click)="diminuisciQuantita(prodotto)" (click)="diminuisci_elimia(prodotto)">-</button>
+              <button type="button" class="btn btn-outline-danger simbolo" (click)="diminuisciQuantita(prodotto)" (click)="diminuisci_elimia(prodotto)">-</button>
             </td>
             <td><a class="text-danger" (click)="elimina(prodotto)">Elimina</a></td>
         </tr>
@@ -32,8 +32,8 @@
 </table>
 
 <div class="sfondo">
-  <div class="container">
-    <button class="bottone"  [routerLink]="'/end'">
+  <div class="container" *ngIf="carrelloService.totaleImporto!=0">
+    <button class="bottone"  [routerLink]="'/end'" onclick="">
     <div class="left-side">
       <div class="card">
         <div class="card-line"></div>

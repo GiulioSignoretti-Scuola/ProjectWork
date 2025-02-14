@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     width: 20%;
-    margin-top: 60px;
+    margin-top: 45px;
 }
 
 .table{
@@ -14,3 +14,25 @@
     font-weight: bold;
     margin-top: 60px;
 }
+
+.buttonB{
+    width: 400px;
+    font-size: 50px;
+    font-weight: bold;
+    background-color: #ffe53b !important;
+    background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%) !important;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.tabella{
+    height: 500px;
+    margin-bottom: 120px;
+    font-size: 30px;
+}
+
+.simboli{
+    scale:1.5;
+}
+
