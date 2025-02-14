@@ -47,5 +47,10 @@ export class CarrelloService {
 
     ) * prodotto.Quantita), 0);
     return totaleProdotti;
-    }
+  }
+
+  getimportoProdotto(prodotto: prodotto): number{
+    const importoProdotto = prodotto.Prezzo + ( prodotto.Ingredienti!=undefined ? prodotto.Ingredienti.reduce((t,i) => t + i.IncrementoPrezzo*Math.max(i.Quantita-i.quantitaIniziale,0),0) : 0)
+    return importoProdotto;
+  }
 }

@@ -35,4 +35,12 @@ export class CarrelloComponent {
       i.Quantita--;
   }
 
+  diminuisci_elimia(prodotto:prodotto){
+    if (prodotto.Quantita == 0){
+      this.carrelloService.remove(prodotto);
+      this.carrello=this.carrelloService.getAll();
+    }
+      
+  }
+
 }
