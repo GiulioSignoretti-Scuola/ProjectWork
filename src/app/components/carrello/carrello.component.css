@@ -66,7 +66,7 @@
     font-weight: bold;
     font-family: "Lexend Deca", sans-serif;
     padding: 20px;
-    border-radius: 30px;
+    border-radius: 20px;
   }
   
   .card {
@@ -258,4 +258,8 @@
   .sfondo{
     background-image: image-set("assets/sfondo2.jpg");
     height: 80.5vh;
+  }
+
+  .simbolo{
+    scale:1.5;
   }
