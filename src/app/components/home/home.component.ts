@@ -24,9 +24,5 @@ export class HomeComponent {
     this.routes.paramMap.subscribe(params => {
       this.singoloProdotto = routes.snapshot.params['id'] != undefined;
     })
-
   }
-
-
-
 }
