@@ -30,17 +30,13 @@ export class SingoloProdottoComponent {
     }
 
     aggiungiIngrediente(i: Ingrediente){
-      if (i.Quantita <= i.QuantitaMin)
+      if (i.Quantita != i.QuantitaMax)
         i.Quantita++;
     }
 
     diminuisciIngrediente(i: Ingrediente){
-      if (i.Quantita >= i.QuantitaMax)
+      if (i.Quantita != i.QuantitaMin)
         i.Quantita--;
-    }
-
-    togliIngrediente(i: Ingrediente){
-      i.Quantita = 0;
     }
 
     aggiungiAlCarrello(prodotto: prodotto | undefined){

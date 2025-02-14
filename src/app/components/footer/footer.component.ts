@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { CarrelloService } from '../../services/carrello.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,5 +10,8 @@ import { RouterLink } from '@angular/router';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
+  constructor(public carrelloService: CarrelloService){
+
+  }
 
 }
