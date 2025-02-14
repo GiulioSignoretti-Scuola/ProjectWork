@@ -15,35 +15,29 @@ import { CarrelloService } from '../../services/carrello.service';
   styleUrl: './singolo-prodotto.component.css'
 })
 
-
-
 export class SingoloProdottoComponent {
-    prodotto: prodotto | undefined;
-
-    constructor(private prodottiServices: ProdottiService, private routes: ActivatedRoute, private carrelloService: CarrelloService){
   
-      this.routes.paramMap.subscribe(params => {
-        let Id = routes.snapshot.params['id'];
-        if (Id != undefined)
-          this.prodotto = prodottiServices.getProdottiById(Id);
-      })
-    }
+  prodotto: prodotto | undefined;
 
-    aggiungiIngrediente(i: Ingrediente){
-      if (i.Quantita != i.QuantitaMax)
-        i.Quantita++;
-    }
-
-    diminuisciIngrediente(i: Ingrediente){
-      if (i.Quantita != i.QuantitaMin)
-        i.Quantita--;
-    }
-
-    aggiungiAlCarrello(prodotto: prodotto | undefined){
-      if (prodotto != undefined){
-        prodotto.Quantita = 1;
-        this.carrelloService.add(prodotto)
-      }
-        
-    }
+  constructor(private prodottiServices: ProdottiService, private routes: ActivatedRoute, private carrelloService: CarrelloService){
+    this.routes.paramMap.subscribe(params => {
+      let Id = routes.snapshot.params['id'];
+      if (Id != undefined)
+        this.prodotto = prodottiServices.getProdottiById(Id);
+    })
+  }
+  aggiungiIngrediente(i: Ingrediente){
+    if (i.Quantita != i.QuantitaMax)
+      i.Quantita++;
+  }
+  diminuisciIngrediente(i: Ingrediente){
+    if (i.Quantita != i.QuantitaMin)
+      i.Quantita--;
+  }
+  aggiungiAlCarrello(prodotto: prodotto | undefined){
+    if (prodotto != undefined){
+      prodotto.Quantita = 1;
+      this.carrelloService.add(prodotto)
+    }      
+  }
 }
