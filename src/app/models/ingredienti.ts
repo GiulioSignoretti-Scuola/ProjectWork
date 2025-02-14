@@ -4,6 +4,7 @@ export interface Ingrediente {
     Quantita: number;
     QuantitaMin: number;
     QuantitaMax: number;
-    IncrementoPrezzo?: number;
+    IncrementoPrezzo: number ;
     Immagine: string;
+    quantitaIniziale: number;
     }

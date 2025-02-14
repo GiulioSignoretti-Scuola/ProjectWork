@@ -20,7 +20,7 @@
           <th scope="col">Quantita</th>
           <th scope="col">Aumenta</th>
           <th scope="col">Diminuisci</th>
-          <th scope="col">Cancella</th>
+          <th scope="col">Prezzo</th>
         </tr>
       </thead>
       <tbody class="table-group-divider">
@@ -29,7 +29,7 @@
           <th>{{ingrediente.Quantita}}</th>
           <td><button type="button" class="btn btn-outline-success" (click)="aggiungiIngrediente(ingrediente)">+</button></td>
           <td><button type="button" class="btn btn-outline-danger" (click)="diminuisciIngrediente(ingrediente)">-</button></td>
-          <td><button type="button" class="btn btn-outline-warning" (click)="togliIngrediente(ingrediente)">🗑️</button></td>
+          <td align="center">{{ingrediente.IncrementoPrezzo}}</td>
         </tr>
       </tbody>
     </table>
