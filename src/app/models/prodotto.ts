@@ -9,4 +9,5 @@ export interface prodotto {
     Categoria: string;
     Ingredienti?: Ingrediente[];
     Immagine: string;
+    Quantita: number;
 }

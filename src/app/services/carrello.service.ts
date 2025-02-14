@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { prodotto } from '../models/prodotto';
+import { Ingrediente } from '../models/ingredienti';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +8,8 @@ import { prodotto } from '../models/prodotto';
 export class CarrelloService {
 
   private carrello:prodotto[] = [];
+
+  private ingrediente: Ingrediente[] = [];
 
   constructor() { }
 
@@ -29,5 +32,21 @@ export class CarrelloService {
 
   get count():number {
     return this.carrello.length;
+  }
+
+  get totaleProdotti(): number {
+    return this.carrello.reduce((total, prodotto) => total + prodotto.Quantita, 0);
+  }
+
+  get totaleImporto(): number {
+    const totaleProdotti = this.carrello.reduce(
+      (total, prodotto) => total + (prodotto.Prezzo * prodotto.Quantita), 0
+    );
+  
+    const totaleIngredienti = this.ingrediente.reduce(
+      (total, ingrediente) => total + (ingrediente.IncrementoPrezzo * ingrediente.Quantita), 0
+    );
+  
+    return totaleProdotti + totaleIngredienti;
   }
 }
