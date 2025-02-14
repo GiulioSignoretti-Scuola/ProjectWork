@@ -263,3 +263,11 @@
   .simbolo{
     scale:1.5;
   }
+
+  .spaziatura{
+    padding: 35px;
+  }
+
+  .tfoot{
+    font-size:40px;
+  }
