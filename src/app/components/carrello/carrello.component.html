@@ -1,6 +1,6 @@
 <app-header></app-header>
 
-<table class="table tabella">
+<table class="table tabella align-middle text-center">
     <thead>
         <tr>
             <th>Prodotto</th>
@@ -14,9 +14,9 @@
             <td>{{prodotto.Descrizione}}<br><!--{{prodotto.modifiche}}  --></td>
             <td>{{prodotto.Prezzo}}</td>
             <td>
-              <button type="button" class="btn btn-outline-success" (click)="aggiungiQuantita(prodotto)">+</button>
+              <button type="button" class="btn btn-outline-success simbolo" (click)="aggiungiQuantita(prodotto)">+</button>
               {{prodotto.Quantita}}
-              <button type="button" class="btn btn-outline-danger" (click)="diminuisciQuantita(prodotto)">-</button>
+              <button type="button" class="btn btn-outline-danger simbolo" (click)="diminuisciQuantita(prodotto)">-</button>
             </td>
             <td><a class="text-danger" (click)="elimina(prodotto)">Elimina</a></td>
         </tr>
